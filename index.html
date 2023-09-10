@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Task1</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-div">
+        <img
+          src="/IMG-20220727-WA0000 (2).jpg"
+          alt="JustAbdul"
+          data-testid="slackDisplayImage"
+        />
+      </div>
+      <h2 data-testid="slackUserName">JustAbdul</h2>
+      <h3 data-testid="myTrack">Frontend</h3>
+      <h3 class="day" data-testid="currentDayOfTheWeek"></h3>
+      <h3 data-testid="currentUTCTime" class="time"></h3>
+      <a href="" data-testid="“githubURL”">GITHUB</a>
+    </div>
+    <script>
+      function getDay() {
+        let day;
+        let date = new Date();
+        switch (date.getDay()) {
+          case 0:
+            day = "Sunday";
+            break;
+          case 1:
+            day = "Monday";
+            break;
+          case 2:
+            day = "Tuesday";
+            break;
+          case 3:
+            day = "Wednesday";
+            break;
+          case 4:
+            day = "Thursday";
+            break;
+          case 5:
+            day = "Friday";
+            break;
+          case 6:
+            day = "Saturday";
+        }
+        let time = date.getTime();
+
+        document.querySelector(".day").innerHTML = day;
+        document.querySelector(".time").innerHTML = time;
+      }
+      getDay();
+    </script>
+  </body>
+</html>
